@@ -1,5 +1,4 @@
-# Mini-Project
-# Driver Drowsiness Detection System
+# Mini-Project-Driver Drowsiness Detection System
 
 ## Overview
 This project aims to develop a Driver Drowsiness Detection System to enhance road safety by detecting and alerting drowsy or sleeping drivers. The system utilizes Eye Blinking Sensor Goggles, an Arduino NANO Board, and LED-based visual alerts to monitor the driver's eye behavior and initiate appropriate responses in real-time.
