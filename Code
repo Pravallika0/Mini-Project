@@ -1,0 +1,73 @@
+#define EYEBLINK 4
+#define m1 2
+#define m2 3
+#define buzzer 13
+#define Gled
+A0 #define
+Rled A1
+void setup()
+{
+Serial.begin(9600);
+pinMode(EYEBLINK,
+INPUT);
+pinMode(buzzer, OUTPUT);
+pinMode(Gled,
+OUTPUT); pinMode(Rled,
+OUTPUT);
+pinMode(m1,
+OUTPUT);
+pinMode(m2,
+OUTPUT);
+digitalWrite(m1, LOW);
+digitalWrite(m2, LOW);
+}
+void loop()
+{
+Serial.println(digitalRead(EYEBLINK));
+if(digitalRead(EYEBLINK) == LOW)
+{
+digitalWrite(Gled, LOW);
+digitalWrite(Rled, LOW);
+digitalWrite(buzzer, LOW);
+digitalWrite(m1,HIGH);
+digitalWrite(m2, LOW);
+delay(200);
+}
+else
+{
+delay (2000);
+if(digitalRead(EYEBLINK) == LOW)
+{
+digitalWrite(Gled,
+LOW); digitalWrite(Rled,
+LOW);
+digitalWrite(buzzer, LOW);
+digitalWrite(m1,
+HIGH);
+digitalWrite(m2, LOW);
+delay(200);
+}
+else
+{
+digitalWrite(Gled,
+HIGH); digitalWrite(Rled,
+LOW);
+digitalWrite(buzzer, HIGH);
+delay(2000);
+while(digitalRead(EYEBLINK) == HIGH)
+{
+digitalWrite(Gled, LOW);
+digitalWrite(Rled,
+HIGH);
+digitalWrite(m1,
+LOW);
+digitalWrite(m2,
+LOW); delay(200);
+if (digitalRead(EYEBLINK) == LOW)
+{
+break;
+}
+}
+}
+}
+}
